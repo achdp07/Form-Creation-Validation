@@ -7,41 +7,40 @@ const form = document.getElementById('registration-form');
       // Validate username
       const usernameInput = document.getElementById('username').value.trim();
       const isValid = true;
-      let messages {};
+      let messages [];
       if (usernameInput.value.length < 3) {
         isValid = false;
-        messages = 'Username must be at least 3 characters long.';
+        messages.push('Username must be at least 3 characters long.');
         return;
       } else {
-        messages = '';
+        messages.push("");
 
       }
 
       // Validate email
       const emailInput = document.getElementById('email').value.trim();
-      const isValid = true;
-      let messages {};
+      let isValid = true;
+      let messages [];
       if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(emailInput.value)) {
-        messages.textContent = 'Please enter a valid email address.';
+        messages.push = 'Please enter a valid email address.';
         return;
       } else {
-        messages.textContent = '';
+        messages.push("");
       }
 
       // Validate password
       const passwordInput = document.getElementById('password').value.trim();
+      let isValid = true;
+      let messages [];
       if (passwordInput.value.length < 6) {
-        passwordError.textContent = 'Password must be at least 6 characters long.';
+        passwordError.push('Password must be at least 6 characters long.');
         return;
       } else {
-        passwordError.textContent = '';
+        messages.push("");
       }
 
       // If all validations pass, submit the form
       form.submit();
     });
-const feedbackDiv = document.getElementById('form-feedback');
-    sty
-
-   
+const feedbackDiv = document.getElementById('form-feedback'); 
 });
